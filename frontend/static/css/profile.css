@@ -1,0 +1,134 @@
+/* --- Split Screen Grid Setup --- */
+.profile-layout-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+@media (max-width: 991px) {
+    .profile-layout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Left Accent Information Panel --- */
+.profile-card-left {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 40px 24px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(138, 149, 168, 0.08);
+}
+
+.avatar-wrapper {
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(123, 150, 236, 0.2);
+    object-fit: cover;
+}
+
+.student-name-header {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.student-id-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #718096;
+    background-color: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.btn-edit-photo {
+    background-color: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    color: #475569;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.btn-edit-photo:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #1e293b;
+}
+
+/* --- Right Side Inner Profile Inputs Grid --- */
+.form-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px 24px;
+}
+
+.input-box-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+/* Forces specific multi-line blocks to span full layout row lines */
+.full-width-field {
+    grid-column: 1 / -1;
+}
+
+/* Overrides to match standard inputs and textareas to our design theme */
+.custom-textarea {
+    background-color: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color: #334155;
+    resize: vertical;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-textarea:focus {
+    background-color: #ffffff;
+    border-color: #a3bffa;
+    box-shadow: 0 0 0 4px rgba(163, 191, 250, 0.25);
+    outline: none;
+}
+
+.custom-input:disabled {
+    background-color: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
+    border-style: dashed;
+}
+
+/* --- Form Submit Control Settings --- */
+.form-action-bar {
+    margin-top: 35px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.save-profile-btn {
+    min-width: 180px;
+    height: 46px;
+}

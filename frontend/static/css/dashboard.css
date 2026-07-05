@@ -1,0 +1,351 @@
+/* --- Core Reset & Pastel Variables --- */
+:root {
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4ebf5 100%);
+    --sidebar-bg: #ffffff;
+    --panel-bg: rgba(255, 255, 255, 0.9);
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    
+    /* Soft Pastel Accents */
+    --accent-blue: #cbd5e1;
+    --pastel-blue-bg: #ebf4ff;
+    --pastel-green-bg: #f0fdf4;
+    --pastel-purple-bg: #faf5ff;
+    --pastel-orange-bg: #fff7ed;
+    
+    --primary-brand: #7b96ec; /* Keeps consistency with your login page button */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+/* --- Top Ribbon Announcement Strip --- */
+.top-ribbon {
+    background-color: #2d3748; /* Sophisticated dark slate contrast */
+    color: #e2e8f0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 8px 24px;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ribbon-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.institution-name {
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+.ribbon-divider {
+    color: #4a5568;
+}
+
+.ribbon-alert {
+    color: #fbd38d; /* Pastel yellow warning */
+    margin-left: auto;
+}
+
+/* --- Dashboard Master Layout Container --- */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: calc(100vh - 33px); /* Accounts for ribbon height */
+}
+
+@media (max-width: 991px) {
+    .dashboard-container {
+        grid-template-columns: 1fr; /* Responsiveness for tablets/phones */
+    }
+    .sidebar {
+        display: none; /* Can be paired with a mobile menu toggle if desired */
+    }
+}
+
+/* --- Premium Sidebar Component --- */
+.sidebar {
+    background: var(--sidebar-bg);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-item a:hover {
+    background-color: #f1f5f9;
+    color: var(--text-main);
+}
+
+.nav-item.active a {
+    background-color: var(--pastel-blue-bg);
+    color: var(--primary-brand);
+    font-weight: 600;
+}
+
+.logout-item {
+    margin-top: auto;
+}
+
+.logout-item a:hover {
+    background-color: #fee2e2;
+    color: #ef4444;
+}
+
+/* --- Main Dashboard Workstation --- */
+.main-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* --- Dynamic Topbar Header --- */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 20px;
+}
+
+.topbar h2 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: 0;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.user-profile-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--panel-bg);
+    padding: 6px 16px 6px 8px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--primary-brand);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.user-role {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* --- Beautiful Pastel KPI Stats Cards --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(148, 163, 184, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255, 0.6);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-info h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin: 0 0 4px 0;
+}
+
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-main);
+}
+
+/* Custom Pastel Card Infusions */
+.pastel-blue { background-color: var(--pastel-blue-bg); }
+.pastel-green { background-color: var(--pastel-green-bg); }
+.pastel-purple { background-color: var(--pastel-purple-bg); }
+.pastel-orange { background-color: var(--pastel-orange-bg); }
+
+/* --- Complex Two-Column Panel System --- */
+.details-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 1200px) {
+    .details-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.content-panel {
+    background: var(--panel-bg);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(138, 149, 168, 0.1);
+}
+
+.panel-header h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+/* Profile Grid Style inside Panel */
+.profile-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.info-group label {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.info-group p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #334155;
+}
+
+/* --- Clean Modern Data Tables --- */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.custom-table td {
+    padding: 16px 0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    border-bottom: 1px solid #f1f5f9;
+    color: var(--text-main);
+}
+
+.custom-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Minimal Status Badges */
+.badge-status {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.badge-status.success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-status.info {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}

@@ -1,0 +1,90 @@
+/* --- Academic Header Pill Elements --- */
+.academic-status-pill {
+    background-color: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    display: inline-block;
+}
+
+/* --- Clean Transcript Content Tweeks --- */
+.alignment-middle td {
+    vertical-align: middle;
+}
+
+.class-tag {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* --- Professional Marks Fractional Display --- */
+.marks-display-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.marks-num {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.marks-max {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* --- High Level Pastel Grade Badge Components --- */
+.grade-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 32px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    border-radius: 8px;
+    letter-spacing: -0.2px;
+    text-align: center;
+}
+
+/* Elite Tier A+ / A Colors */
+.g-aplus {
+    background-color: #dcfce7;
+    color: #14532d;
+    border: 1px solid #bbf7d0;
+}
+
+.g-a {
+    background-color: #ecfccb;
+    color: #3f6212;
+    border: 1px solid #d9f99d;
+}
+
+/* Mid Tier B / C Colors */
+.g-b {
+    background-color: #e0f2fe;
+    color: #075985;
+    border: 1px solid #bae6fd;
+}
+
+.g-c {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+/* Warning/Fail Colors */
+.g-fail {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+    width: 55px; /* Extra horizontal room for clear readability */
+}

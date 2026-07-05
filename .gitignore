@@ -1,0 +1,22 @@
+# Virtual Environments
+.venv/
+venv/
+frontend/flask/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
